@@ -8,29 +8,92 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <header class="w-100 bg-black p-2 d-flex align-items-center gap-3 justify-content-between  justify-content-lg-start   ">
-      <div class="logo">
-        <img width="50" src="./assets/img/duck.png" alt="Logo">
-      </div>
-      <!-- /.logo -->
-        <ul class="d-flex text-secondary gap-2 text-decoration-none list-unstyled mb-0">
-          <li class="text-light d-none d-sm-none d-md-none d-lg-block"><a href=""></a>Catalogo Libri</li>
-          <li class="d-none d-sm-none d-md-none d-lg-block "><a href=""></a>Anagrafica Utenti</li>
-          <li class="d-none d-sm-none d-md-none d-lg-block"><a href=""></a>Storico Prestiti</li>
-          <li class="d-none d-sm-none d-md-none d-lg-block"><a href=""></a>Help</li>
-        </ul>
-        <!-- unordered list -->
-        <button class="btn d-flex text-secondary border border-1 border-secondary rounded-1 p-1 px-2 d-lg-none">
-          <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
+    <header id="site_header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img width="60" src="./assets/img/duck.png" alt="">
+          </a>
+          <!-- /logo -->
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- /button menù -->
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" aria-current="page">Catalogo Libri <span
+                    class="visually-hidden">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Anagrafica utenti</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Storico prestiti</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+            </ul>
+            <!-- /ul menù -->
+            <form class="d-flex mx-2 my-2 w-25" role="search">
+              <input class="form-control me-2" type="search" placeholder="Cerca libro" aria-label="Search">
+              <button class="btn btn-outline-secondary" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Cerca</button>
+            </form>
+            <!-- /search button -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">LIBRO NON TROVATO</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Scusa, il mio programmatore non sa ancora costruire Database. <br>
+                    Il servizio sarà presto disponibile (forse, si spera! <i class="fa-regular fa-face-smile"></i> )
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tornerò</button>
+                    <button type="button" class="btn btn-danger">Aggiungi</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /modal search button -->
+          </div>
+        </div>
+      </nav>
+      <!-- /nav -->
     </header>
     <!-- /header -->
     <main class="container-lg container-md pt-3">
       <section class="d-flex justify-content-between ">
-        <span class="fs-3 ">Catalogo Libri</span>
-        <a class="btn btn-primary" href="#" role="button">Aggiungi Libro</a>
+        <h1 class="fs-3 fw-normal ">Catalogo Libri</h1>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Aggiungi Libro</button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Quale libro vuoi aggiungere?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Seleziona
+              </button>
+              <ul class="dropdown-menu">
+                <li><button class="dropdown-item" type="button">Libro1</button></li>
+                <li><button class="dropdown-item" type="button">Libro2</button></li>
+                <li><button class="dropdown-item" type="button">Libro3</button></li>
+                <li><button class="dropdown-item" type="button">Libro4</button></li>
+                <li><button class="dropdown-item" type="button">Libro5</button></li>
+                <li><button class="dropdown-item" type="button">Libro6</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- /section title + button -->
+      <!-- /section title + button + .offcanvas -->
       <section>
         <div class="table-responsive">
           <table class="table mt-3 table-striped ">
