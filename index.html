@@ -68,279 +68,358 @@
     </header>
     <!-- /header -->
     <main class="container-lg container-md pt-3">
-      <section class="d-flex justify-content-between ">
-        <h1 class="fs-3 fw-normal ">Catalogo Libri</h1>
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Aggiungi Libro</button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Quale libro vuoi aggiungere?</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="row">
+        <div class="col-lg-9 col-sm-12">
+          <div class="d-flex justify-content-between ">
+            <h1 class="fs-3 fw-normal ">Catalogo Libri</h1>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Aggiungi Libro</button>
           </div>
-          <div class="offcanvas-body">
-            <div class="dropdown pb-3 ">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label" for="exampleRadios1">
-                  Bambini 3-6
-                </label>
+          <!-- /title and button "add books" -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Quale libro vuoi aggiungere?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="dropdown pb-3 ">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Bambini 3-6
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    Bambini 6-8
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    Bambini 8+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    Adulti
+                  </label>
+                </div>
+                </div>
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Seleziona
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">Libro1</button></li>
+                  <li><button class="dropdown-item" type="button">Libro2</button></li>
+                  <li><button class="dropdown-item" type="button">Libro3</button></li>
+                  <li><button class="dropdown-item" type="button">Libro4</button></li>
+                  <li><button class="dropdown-item" type="button">Libro5</button></li>
+                  <li><button class="dropdown-item" type="button">Libro6</button></li>
+                </ul>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
-                  Bambini 6-8
-                </label>
+            </div>
+            <!-- /.offcanvas -->
+            <div class="table-responsive">
+              <table class="table mt-3 table-striped ">
+                <thead>
+                  <tr>
+                    <th class="col-6">Titolo</th>
+                    <th class="d-none d-md-table-cell">Data prestito</th>
+                    <th>Stato</th>
+                    <th>Azioni</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-secondary">I pilastri della terra</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td>
+                      <span class="bg-success rounded-3 text-light p-1 ">
+                        Disponibile
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">I promessi sposi</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td>
+                      <span class="bg-success rounded-3 text-light p-1 ">
+                        Disponibile
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">Il signore degli anelli</td>
+                    <td class="d-none d-md-table-cell">18/10/2023</td>
+                    <td>
+                      <span class="bg-warning  rounded-3 text-light p-1 ">
+                        In prestito
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">Harry Potter e la pietra filosofale</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td>
+                      <span class="bg-success rounded-3 text-light p-1 ">
+                        Disponibile
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">Il codice Da Vinci</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td>
+                      <span class="bg-danger  rounded-3 text-light p-1 ">
+                        Non disponibile
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">Shining</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td>
+                      <span class="bg-success rounded-3 text-light p-1 ">
+                        Disponibile
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">La divina commedia</td>
+                    <td class="d-none d-md-table-cell">21/09/2023</td>
+                    <td>
+                      <span class="bg-warning  rounded-3 text-light p-1 ">
+                        In prestito
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">Il trono di spade</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td>
+                      <span class="bg-success rounded-3 text-light p-1 ">
+                        Disponibile
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">Il mondo di Sofia</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td>
+                      <span class="bg-danger  rounded-3 text-light p-1 ">
+                        Non disponibile
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">Le cronache di Narnia: il leone, la strega e l'armadio</td>
+                    <td class="d-none d-md-table-cell">25/07/2023</td>
+                    <td>
+                      <span class="bg-warning  rounded-3 text-light p-1 ">
+                        In prestito
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">Il piccolo principe</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td>
+                      <span class="bg-success rounded-3 text-light p-1 ">
+                        Disponibile
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-secondary">La storia infinita</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td>
+                      <span class="bg-success rounded-3 text-light p-1 ">
+                        Disponibile
+                      </span>
+                    </td>
+                    <td>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>              
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>    
+            <!-- /table books -->
+        </div>
+        <!-- /.col-9 -->
+        <div class="col-lg-3 col-sm-12">
+          <div class="card">
+            <div class="card-header fs-4">
+              Todo
+            </div>
+            <div class="card-body">
+              <div class="list-group">
+                <div class="list-group-item"><input type="checkbox">
+                  Chiamare segreteria
+                </div>
+                <div class="list-group-item"><input type="checkbox">
+                  Mandare avvisi prestiti scaduti
+                </div>
+                <div class="list-group-item"><input type="checkbox">
+                  Ordinare nuovi libri
+                </div>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
-                  Bambini 8+
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
-                  Adulti
-                </label>
-              </div>
-              </div>
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Seleziona
-              </button>
-              <ul class="dropdown-menu">
-                <li><button class="dropdown-item" type="button">Libro1</button></li>
-                <li><button class="dropdown-item" type="button">Libro2</button></li>
-                <li><button class="dropdown-item" type="button">Libro3</button></li>
-                <li><button class="dropdown-item" type="button">Libro4</button></li>
-                <li><button class="dropdown-item" type="button">Libro5</button></li>
-                <li><button class="dropdown-item" type="button">Libro6</button></li>
-              </ul>
             </div>
           </div>
+          <!-- /card Todo -->
+          <div class="card mt-4 ">
+            <div class="card-header fs-3">
+              F.A.Q.
+            </div>
+            <div class="card-body">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                      Come aggiungere un nuovo libro?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Per il momento non puoi.
+                    </div>
+                  </div>
+                </div>       
+              </div>
+              <hr>
+              <div class="accordion accordion-flush" id="accordionFlushExample2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="true" aria-controls="flush-collapseOne2">
+                      Come posso accedere all'anagrafica utenti?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample2">
+                    <div class="accordion-body">
+                      Perchè dovresti?
+                    </div>
+                  </div>
+                </div>       
+              </div>
+              <hr>
+              <div class="accordion accordion-flush" id="accordionFlushExample3">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne3" aria-expanded="true" aria-controls="flush-collapseOne3">
+                      Posso usare questa dashboard da mobile?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne3" data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      Solo se hai pelo!
+                    </div>
+                  </div>
+                </div>       
+              </div>
+            </div>
+          </div>
+          <!-- /card F.A.Q. -->
         </div>
-      </section>
-      <!-- /section title + button + .offcanvas -->
-      <section>
-        <div class="table-responsive">
-          <table class="table mt-3 table-striped ">
-            <thead>
-              <tr>
-                <th class="col-6">Titolo</th>
-                <th class="d-none d-md-table-cell">Data prestito</th>
-                <th>Stato</th>
-                <th>Azioni</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="text-secondary">I pilastri della terra</td>
-                <td class="d-none d-md-table-cell">-</td>
-                <td>
-                  <span class="bg-success rounded-3 text-light p-1 ">
-                    Disponibile
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">I promessi sposi</td>
-                <td class="d-none d-md-table-cell">-</td>
-                <td>
-                  <span class="bg-success rounded-3 text-light p-1 ">
-                    Disponibile
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">Il signore degli anelli</td>
-                <td class="d-none d-md-table-cell">18/10/2023</td>
-                <td>
-                  <span class="bg-warning  rounded-3 text-light p-1 ">
-                    In prestito
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">Harry Potter e la pietra filosofale</td>
-                <td class="d-none d-md-table-cell">-</td>
-                <td>
-                  <span class="bg-success rounded-3 text-light p-1 ">
-                    Disponibile
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">Il codice Da Vinci</td>
-                <td class="d-none d-md-table-cell">-</td>
-                <td>
-                  <span class="bg-danger  rounded-3 text-light p-1 ">
-                    Non disponibile
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">Shining</td>
-                <td class="d-none d-md-table-cell">-</td>
-                <td>
-                  <span class="bg-success rounded-3 text-light p-1 ">
-                    Disponibile
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">La divina commedia</td>
-                <td class="d-none d-md-table-cell">21/09/2023</td>
-                <td>
-                  <span class="bg-warning  rounded-3 text-light p-1 ">
-                    In prestito
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">Il trono di spade</td>
-                <td class="d-none d-md-table-cell">-</td>
-                <td>
-                  <span class="bg-success rounded-3 text-light p-1 ">
-                    Disponibile
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">Il mondo di Sofia</td>
-                <td class="d-none d-md-table-cell">-</td>
-                <td>
-                  <span class="bg-danger  rounded-3 text-light p-1 ">
-                    Non disponibile
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">Le cronache di Narnia: il leone, la strega e l'armadio</td>
-                <td class="d-none d-md-table-cell">25/07/2023</td>
-                <td>
-                  <span class="bg-warning  rounded-3 text-light p-1 ">
-                    In prestito
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">Il piccolo principe</td>
-                <td class="d-none d-md-table-cell">-</td>
-                <td>
-                  <span class="bg-success rounded-3 text-light p-1 ">
-                    Disponibile
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-              <tr>
-                <td class="text-secondary">La storia infinita</td>
-                <td class="d-none d-md-table-cell">-</td>
-                <td>
-                  <span class="bg-success rounded-3 text-light p-1 ">
-                    Disponibile
-                  </span>
-                </td>
-                <td>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  <button class="text-secondary bg-transparent border border-1 rounded-1 border border-secondary">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>              
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>    
-      </section>
-      <!-- /section/.table -->
+        <!-- /.col-3 -->
+      </div>
+      <!-- /.row -->
     </main>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
